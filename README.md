@@ -4,6 +4,8 @@ An interface for placement cell web application to keep records of students and 
 
 This App built using EJS, MongoDB, ExpressJs, Nodejs and PassportJs
 
+Preview -   https://employee-portal-rfvg.onrender.com/user/signin
+
 # Features
 
 1.Sign up/Sign in forms for employees
