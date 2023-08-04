@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('_bootstrap_meta') %>
+    <title>Add Student Form</title>
+  </head>
+  <body>
+    <%- include('_header') %>
+
+    <div class="w-50 mx-auto mt-5 mb-5 p-3 shadow" style="border-radius: 10px">
+      <h4
+        class="mt-2"
+        style="font-size: 1.7rem; text-align: center; font-weight: 600"
+      >
+        Update Student
+      </h4>
+      <form></form>
+      <form
+        onsubmit="handleSubmit()"
+        action="/students/edit-student/<%=student.id%>"
+        method="post"
+      >
+        <div class="mb-3">
+          <lable for="batch">Batch</lable>
+          <input
+            type="text"
+            class="form-control"
+            id="batch"
+            name="batch"
+            value="<%=student.batch%>"
+          />
+        </div>
+
+        <div class="mb-3">
+          <lable for="name">Name</lable>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            value="<%=student.name%>"
+          />
+        </div>
+        <div class="mb-3">
+          <lable for="email">Email address</lable>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            value="<%=student.email%>"
+          />
+        </div>
+        <div class="mb-3">
+          <lable for="contactNumber">Mobile Number</lable>
+          <input
+            type="number"
+            class="form-control"
+            id="contactNumber"
+            name="contactNumber"
+            value="<%=student.contactNumber%>"
+          />
+        </div>
+        <div class="mb-3">
+          <lable for="college">College</lable>
+          <input
+            type="text"
+            class="form-control"
+            id="college"
+            name="college"
+            value="<%=student.college%>"
+          />
+        </div>
+
+        <div class="mb-3 d-flex justify-content-between">
+          <div class="mb-3 p-1">
+            <label for="dsa">DSA</label>
+            <input
+              type="number"
+              class="form-control"
+              id="dsa"
+              name="dsa"
+              value="<%=student.dsa%>"
+            />
+          </div>
+          <div class="mb-3 p-1">
+            <label for="webd">Web Development</label>
+            <input
+              type="number"
+              class="form-control"
+              id="webd"
+              name="webd"
+              value="<%=student.webd%>"
+            />
+          </div>
+          <div class="mb-3 p-1">
+            <label for="react">React</label>
+            <input
+              type="number"
+              class="form-control"
+              id="react"
+              name="react"
+              value="<%=student.react%>"
+            />
+          </div>
+        </div>
+
+        <input
+          type="submit"
+          value="Update"
+          class="btn btn-primary mt-3 mb-4 align-self-center"
+          style="border-radius: 25px; width: 100%; background-color: black"
+        />
+      </form>
+    </div>
+
+    <%- include('_bootstrap_script') %>
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('_bootstrap_meta.ejs') %>
+    <title>Sign In</title>
+  </head>
+  <body style="background-color: #ffffff">
+    <%- include('_header') %>
+    <div
+      class="w-40 mx-auto mt-5 p-3 d-flex flex-column justify-content-center align-items-center"
+      style="
+        max-width: 450px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 140px;
+      "
+    >
+      <div class="mb-3" style="width: 200px; text-align: center">
+        <h2>Sign Up</h2>
+      </div>
+      <div>
+        <form action="/user/create" method="post" style="width: 300px">
+          <div class="mb-3" style="width: 100%">
+            <input
+              type="text"
+              class="p-2"
+              id="name"
+              name="name"
+              placeholder="Name"
+              style="width: 100%"
+            />
+          </div>
+          <div class="mb-3" style="width: 100%">
+            <input
+              type="email"
+              class="p-2"
+              id="email"
+              name="email"
+              placeholder="Email - abc@email.com"
+              style="width: 100%"
+            />
+          </div>
+          <div class="mb-3" style="width: 100%">
+            <input
+              type="password"
+              class="p-2"
+              id="password"
+              name="password"
+              placeholder="Password"
+              style="width: 100%"
+            />
+          </div>
+          <div class="mb-4" style="width: 100%">
+            <input
+              type="password"
+              class="p-2"
+              id="confirm-password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              style="width: 100%"
+            />
+          </div>
+          <button
+            class="mb-3 p-2"
+            style="
+              background-color: black;
+              color: #ffffff;
+              border-radius: 25px;
+              border: none;
+              width: 100%;
+            "
+            type="submit"
+          >
+            Sign up
+          </button>
+          <div class="mb-3" style="text-align: center">
+            <p>
+              Already a user?
+              <a href="/user/signin" style="color: black">Sign in</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <%- include('_bootstrap_script') %>
+  </body>
+</html>

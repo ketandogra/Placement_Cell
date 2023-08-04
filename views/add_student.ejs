@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('_bootstrap_meta') %>
+    <title>Add Student Form</title>
+  </head>
+  <body>
+    <%- include('_header') %>
+
+    <div class="w-50 mx-auto mt-5 mb-5 p-3 shadow" style="border-radius: 10px">
+      <h4
+        class="mt-2"
+        style="font-size: 1.7rem; text-align: center; font-weight: 600"
+      >
+        Add Student
+      </h4>
+      <form></form>
+      <form
+        onsubmit="handleSubmit()"
+        action="/students/addstudent"
+        method="post"
+        id="add-student"
+      >
+        <div class="mb-3">
+          <lable for="batch">Batch</lable>
+          <input type="text" class="form-control" id="batch" name="batch" />
+        </div>
+
+        <div class="mb-3">
+          <lable for="name">Name</lable>
+          <input type="text" class="form-control" id="name" name="name" />
+        </div>
+        <div class="mb-3">
+          <lable for="email">Email address</lable>
+          <input type="email" class="form-control" id="email" name="email" />
+        </div>
+        <div class="mb-3">
+          <lable for="contactNumber">Mobile Number</lable>
+          <input
+            type="number"
+            class="form-control"
+            id="contactNumber"
+            name="contactNumber"
+          />
+        </div>
+        <div class="mb-3">
+          <lable for="college">College</lable>
+          <input type="text" class="form-control" id="college" name="college" />
+        </div>
+        <div class="mb-3">
+          <label for="placement" class="form-label">Placement Status</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="placement"
+            name="placement"
+          >
+            <option value="" selected disable hidden>Select Status</option>
+
+            <option value="Placed">Placed</option>
+            <option value="Not Placed">Not Placed</option>
+          </select>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-between">
+          <div class="mb-3 p-1">
+            <label for="dsa">DSA</label>
+            <input type="number" class="form-control" id="dsa" name="dsa" />
+          </div>
+          <div class="mb-3 p-1">
+            <label for="webd">Web Development</label>
+            <input type="number" class="form-control" id="webd" name="webd" />
+          </div>
+          <div class="mb-3 p-1">
+            <label for="react">React</label>
+            <input type="number" class="form-control" id="react" name="react" />
+          </div>
+        </div>
+
+        <input
+          type="submit"
+          value="Add Student"
+          class="btn btn-primary mt-3 mb-4 align-self-center"
+          style="border-radius: 25px; width: 100%; background-color: black"
+        />
+      </form>
+    </div>
+
+    <%- include('_bootstrap_script') %>
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+      }
+    </script>
+  </body>
+</html>

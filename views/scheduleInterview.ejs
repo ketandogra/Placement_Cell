@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('_bootstrap_meta') %>
+    <title>Add Student Form</title>
+  </head>
+  <body>
+    <%- include('_header') %>
+
+    <div
+      class="mx-auto mb-5 p-3 shadow"
+      style="border-radius: 10px; width: 30vw; margin-top: 100px"
+    >
+      <h4
+        class="mt-2"
+        style="font-size: 1.7rem; text-align: center; font-weight: 600"
+      >
+        Schedule Interview
+      </h4>
+      <form></form>
+      <form
+        action="/company/schedule-interview"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <div class="mb-3 mt-4">
+          <lable for="name" class="form-label">Name</lable>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="id"
+            id="name"
+          >
+            <option value="" selected disabled>Select Student</option>
+            <%for(let student of students){%>
+            <option value="<%=student.id%>"><%= student.name%></option>
+            <%}%>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <lable for="company" class="form-label">Company</lable>
+          <input type="text" class="form-control" id="company" name="company" />
+        </div>
+
+        <div class="mb-3">
+          <lable for="date" class="form-label">Date</lable>
+          <input type="date" class="form-control" id="date" name="date" />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary mt-3 mb-4 align-self-center"
+          style="border-radius: 25px; width: 100%; background-color: black"
+        >
+          Schedule Interview
+        </button>
+      </form>
+    </div>
+
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+      }
+    </script>
+
+    <%- include('_bootstrap_script') %>
+  </body>
+</html>

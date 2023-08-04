@@ -1,0 +1,85 @@
+<header>
+  <nav
+    class="navbar navbar-expand-lg bg-body-tertiary"
+    style="background-color: black"
+  >
+    <div class="container-fluid">
+      <a
+        class="navbar-brand"
+        href="/"
+        style="color: #ffff; font-weight: 600; font-size: 1.5rem"
+        >Placement Portal</a
+      >
+      
+          <form class="d-flex px-4">
+            <%if (locals.user){%>
+            <a
+              class="navbar-brand p-2"
+              href="/"
+              style="color: #ffff; font-weight: 500; font-size: 1.2rem"
+              >Dashboard</a
+            >
+            <a
+              class="navbar-brand p-2"
+              href="/company/home"
+              style="color: #ffff; font-weight: 500; font-size: 1.2rem"
+              >Company List</a
+            >
+            <a
+              class="navbar-brand p-2"
+              href="/user/download-csv"
+              style="color: #ffff; font-weight: 500; font-size: 1.2rem"
+              >Download Report</a
+            >
+
+
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDarkDropdown"
+              aria-controls="navbarNavDarkDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button
+                    class="btn  dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="color:#ffff;font-size: 1.2rem; font-weight: 500;"
+                  >
+                    <%= user.name %>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark" style="padding:5px;width:100px !important;margin-left:-20px;
+                  ">
+                    <li><a class="dropdown-item" href="/user/signout" style="font-size: 1rem;width:100% !important;">Sign out</a></li>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <%}else{%>
+              <a
+              class="navbar-brand p-2"
+              href="/user/signin"
+              style="color: #ffff; font-weight: 500; font-size: 1.2rem"
+              >Sign in</a
+            >
+            <a
+              class="navbar-brand p-2"
+              href="/user/signup"
+              style="color: #ffff; font-weight: 500; font-size: 1.2rem"
+              >Sign up</a
+            >
+          </form>
+          <%}%>
+      
+    </div>
+  </nav>
+</header>

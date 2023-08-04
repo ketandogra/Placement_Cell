@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('_bootstrap_meta.ejs') %>
+    <title>Sign In</title>
+  </head>
+  <body style="background-color: #ffffff">
+    <%- include('_header') %>
+    <div
+      class="w-40 mx-auto mt-5 p-3 d-flex flex-column justify-content-center align-items-center"
+      style="
+        max-width: 450px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      "
+    >
+      <div class="mb-3" style="width: 100px; text-align: center">
+        <h4>Sign In</h4>
+      </div>
+      <div>
+        <form action="/user/create-session" method="post" style="width: 300px">
+          <div class="mb-3" style="width: 100%">
+            <input
+              class="p-2"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              style="width: 100%"
+            />
+          </div>
+          <div class="mb-4" style="width: 100%">
+            <input
+              class="p-2"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              style="width: 100%"
+            />
+          </div>
+          <button
+            class="mb-3 p-2"
+            style="
+              background-color: black;
+              color: #ffffff;
+              border-radius: 25px;
+              border: none;
+              width: 100%;
+            "
+            type="submit"
+          >
+            Sign in
+          </button>
+
+          <div class="mb-3" style="text-align: center">
+            <p>
+              No Account?
+              <a href="/user/signup" style="color: black">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%- include('_bootstrap_script') %>
+  </body>
+</html>
