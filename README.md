@@ -39,11 +39,12 @@ Preview -   https://employee-portal-rfvg.onrender.com/user/signin
 ![e3](https://github.com/ketandogra/employee_portal/assets/75082428/b01b0036-b22d-4601-bbd0-e44f945203f6)
 
 # Add new student details page
-![e5](https://github.com/ketandogra/employee_portal/assets/75082428/533f8291-503e-46d1-9182-5777ab807022)
+![e6](https://github.com/ketandogra/employee_portal/assets/75082428/52271e03-727e-428c-b9cd-4c8fb86b768f)
+
 
 # Company List gage
 ![e4](https://github.com/ketandogra/employee_portal/assets/75082428/d935c67b-2133-47bd-aff5-0ab902b9bd25)
 
 # Interview Schedule page
-![e6](https://github.com/ketandogra/employee_portal/assets/75082428/52271e03-727e-428c-b9cd-4c8fb86b768f)
+![e5](https://github.com/ketandogra/employee_portal/assets/75082428/533f8291-503e-46d1-9182-5777ab807022)
 
