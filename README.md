@@ -1,6 +1,9 @@
 ## PLACEMENT CELL APP
 
-An interface for placement cell web application to keep records of students and schedule interview with different companies
+•	Developed a dedicated web interface for the Placement Cell project, optimizing student record management and facilitating company interview coordination.
+•	Implemented strong authentication and secure routes to enhance data security. Employed a technology stack including EJS, MongoDB, ExpressJS, Node.js, and Passport.js for a seamless and comprehensive functional experience.
+•	Incorporated a key feature enabling student placement report downloads, enriching insight availability.
+
 
 This App built using EJS, MongoDB, ExpressJs, Nodejs and PassportJs
 
